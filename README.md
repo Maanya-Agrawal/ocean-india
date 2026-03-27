@@ -1,4 +1,4 @@
-# 🌊 OceanIndia — Ocean State Monitoring Dashboard
+# OceanIndia — Ocean State Monitoring Dashboard
 
 A React-based dashboard monitoring ocean health across India's coastline and surrounding seas.
 
@@ -8,7 +8,7 @@ Inspired by: INCOIS · IMD · NIOT · MoES · CMLRE
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ocean-india/
@@ -41,7 +41,7 @@ ocean-india/
 
 ---
 
-## 🚀 Setup & Run
+## Setup & Run
 
 ### Prerequisites
 - Node.js (v16 or above) — download from [nodejs.org](https://nodejs.org)
@@ -64,7 +64,7 @@ The app opens at **http://localhost:3000** automatically.
 
 ---
 
-## 🌐 Deploy to GitHub Pages
+## Deploy to GitHub Pages
 
 ```bash
 # 1. Install gh-pages
@@ -84,7 +84,7 @@ Your site will be live at `https://YOUR-USERNAME.github.io/ocean-india`
 
 ---
 
-## 📊 Dashboard Pages
+## Dashboard Pages
 
 | Page | What it shows |
 |---|---|
@@ -96,17 +96,17 @@ Your site will be live at `https://YOUR-USERNAME.github.io/ocean-india`
 
 ---
 
-## 🌊 Regions Covered
+## Regions Covered
 
 Arabian Sea · Bay of Bengal · Lakshadweep Sea · Indian Ocean
 
-## 🏖 Coastal Cities
+## Coastal Cities
 
 Mumbai · Chennai · Kochi · Visakhapatnam · Kolkata · Mangaluru · Puducherry · Port Blair
 
 ---
 
-## 🔧 Technologies
+## Technologies
 
 | Technology | Role in project |
 |---|---|
@@ -117,7 +117,7 @@ Mumbai · Chennai · Kochi · Visakhapatnam · Kolkata · Mangaluru · Puducherr
 
 ---
 
-## 📌 Notes
+## Notes
 
 - All data is **simulated** for academic purposes
 - No backend required
