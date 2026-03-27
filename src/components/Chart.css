@@ -1,0 +1,19 @@
+/* Chart.css — shared chart panel styles */
+.chart-panel { height: 100%; }
+
+.range-btns { display: flex; gap: 0.3rem; }
+
+.range-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.range-btn:hover { border-color: var(--accent-mid); color: var(--accent); }
+.range-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }

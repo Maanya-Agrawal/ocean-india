@@ -1,0 +1,99 @@
+/* FishingTable.css */
+.page-section { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.page-section-header { margin-bottom: 0.2rem; }
+
+.page-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+.page-sub {
+  font-size: 0.78rem;
+  color: var(--text-lt);
+  font-family: var(--font-mono);
+}
+
+/* ── Summary strip ── */
+.ft-info-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ft-info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.ft-info--critical { border-left-color: var(--critical); }
+.ft-info--warning  { border-left-color: var(--warning); }
+.ft-info--safe     { border-left-color: var(--safe); }
+.ft-info--neutral  { border-left-color: var(--accent); }
+
+.ft-info-label {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-lt);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ft-info-value {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--text);
+  line-height: 1;
+}
+
+/* ── Table ── */
+.table-wrap { overflow-x: auto; }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.data-table thead th {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  background: var(--surface2);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-lt);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s;
+}
+
+.data-table tbody tr:hover { background: var(--surface2); }
+.data-table tbody td { padding: 0.7rem 1rem; color: var(--text); white-space: nowrap; }
+
+.data-table .mono   { font-family: var(--font-mono); }
+.data-table .accent { color: var(--accent); font-weight: 500; }
+.data-table .muted  { color: var(--text-lt); }
+
+/* ── Badge variants for table ── */
+.badge-critical { background: var(--critical-lt); color: var(--critical); border: 1px solid rgba(192,57,43,0.2); }
+.badge-warning  { background: var(--warning-lt);  color: var(--warning);  border: 1px solid rgba(212,120,10,0.2); }
+.badge-safe     { background: var(--safe-lt);     color: var(--safe);     border: 1px solid rgba(26,122,74,0.2); }
+.badge-caution  { background: var(--warning-lt);  color: var(--warning);  border: 1px solid rgba(212,120,10,0.2); }
+.badge-unsafe   { background: var(--critical-lt); color: var(--critical); border: 1px solid rgba(192,57,43,0.2); }
+
+@media (max-width: 680px) { .ft-info-strip { grid-template-columns: 1fr 1fr; } }

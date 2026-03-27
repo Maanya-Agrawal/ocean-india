@@ -1,0 +1,44 @@
+/* AlertBanner.css */
+.alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--critical-lt);
+  border-bottom: 1px solid rgba(192,57,43,0.18);
+  font-size: 0.8rem;
+  color: var(--critical);
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-banner::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--critical);
+  animation: abPulse 2s ease-in-out infinite;
+}
+
+@keyframes abPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+.ab-icon { font-size: 1rem; flex-shrink: 0; }
+.ab-text { flex: 1; color: var(--text); }
+.ab-text strong { color: var(--critical); }
+
+.ab-tag {
+  background: var(--critical);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0.22rem 0.65rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}

@@ -1,0 +1,119 @@
+/* Glossary.css */
+.glossary-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s;
+}
+
+.glossary-search-wrap:focus-within { border-color: var(--accent-mid); }
+
+.gs-icon { font-size: 1rem; flex-shrink: 0; }
+
+.glossary-search {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.glossary-search::placeholder { color: var(--text-lt); }
+
+.gs-clear {
+  background: none;
+  border: none;
+  color: var(--text-lt);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.gs-clear:hover { color: var(--critical); }
+
+.glossary-empty {
+  text-align: center;
+  color: var(--text-lt);
+  font-style: italic;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.glossary-item {
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.glossary-item:last-child { border-bottom: none; }
+.glossary-item:hover { background: var(--surface2); }
+.glossary-item.open  { background: var(--accent-lt); }
+
+.gi-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+}
+
+.gi-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-lt);
+  flex-shrink: 0;
+  width: 1.8rem;
+}
+
+.gi-term {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.glossary-item.open .gi-term { color: var(--accent); }
+
+.gi-arrow {
+  font-size: 1.1rem;
+  color: var(--text-lt);
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+  width: 1rem;
+  text-align: center;
+}
+
+.gi-def {
+  padding: 0 1.2rem 1rem calc(1.2rem + 2.8rem);
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.glossary-credit {
+  font-size: 0.72rem;
+  color: var(--text-lt);
+  font-family: var(--font-mono);
+  text-align: center;
+}

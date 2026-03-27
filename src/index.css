@@ -1,0 +1,63 @@
+/* ── OceanIndia Global Styles ── */
+/* Uses HTML + CSS as distinct technologies alongside JS + React */
+
+:root {
+  --bg:         #f4f7f9;
+  --surface:    #ffffff;
+  --surface2:   #eef2f5;
+  --border:     #dde4ea;
+  --border2:    #c8d4dc;
+  --accent:     #0a4f6e;
+  --accent-mid: #1a7a9a;
+  --accent-lt:  #e6f4f9;
+  --critical:   #c0392b;
+  --critical-lt:#fdf0ee;
+  --warning:    #d4780a;
+  --warning-lt: #fef6ea;
+  --safe:       #1a7a4a;
+  --safe-lt:    #eaf7ef;
+  --india:      #e07b39;
+  --text:       #1a2e3a;
+  --text-mid:   #4a6070;
+  --text-lt:    #8aa0ae;
+  --font-serif: 'DM Serif Display', serif;
+  --font-sans:  'DM Sans', sans-serif;
+  --font-mono:  'DM Mono', monospace;
+  --shadow-sm:  0 1px 4px rgba(10,40,60,0.07);
+  --shadow-md:  0 4px 16px rgba(10,40,60,0.10);
+  --radius:     8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 15px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-mid); }
+
+/* ── Leaflet popup override ── */
+.leaflet-popup-content-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-sans);
+  color: var(--text);
+  font-size: 13px;
+}
+.leaflet-popup-tip { background: var(--surface); }
+.leaflet-popup-close-button { color: var(--text-lt) !important; }
+
+/* ── Utility ── */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }

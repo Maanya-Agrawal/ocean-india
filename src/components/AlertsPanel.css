@@ -1,0 +1,61 @@
+/* AlertsPanel.css */
+.alerts-panel { flex: 1; }
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.alert-card {
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid transparent;
+  transition: background 0.15s;
+}
+
+.alert-card--critical { background: var(--critical-lt); border-left-color: var(--critical); }
+.alert-card--warning  { background: var(--warning-lt);  border-left-color: var(--warning); }
+.alert-card--safe     { background: var(--safe-lt);     border-left-color: var(--safe); }
+
+.ac-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.ac-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+.ac-type {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.ac-region {
+  font-size: 0.68rem;
+  color: var(--text-lt);
+  font-family: var(--font-mono);
+}
+
+.ac-time {
+  font-size: 0.65rem;
+  color: var(--text-lt);
+  font-family: var(--font-mono);
+  margin-left: auto;
+  white-space: nowrap;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.ac-detail {
+  font-size: 0.75rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+  padding-left: 1.6rem;
+}

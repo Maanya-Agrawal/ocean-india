@@ -1,0 +1,91 @@
+/* App.css */
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+
+.main-content {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.8rem 1.5rem 3rem;
+}
+
+/* ── Chart Grid Layout ── */
+.grid-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.col-wide   { grid-column: 1 / 3; }
+.col-narrow { grid-column: 3 / 4; grid-row: 1 / 3; display: flex; flex-direction: column; gap: 1.2rem; }
+.col-half   { grid-column: span 1; }
+
+/* ── Shared Panel ── */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+/* ── Status badges ── */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.badge.critical { background: var(--critical-lt); color: var(--critical); }
+.badge.warning  { background: var(--warning-lt);  color: var(--warning); }
+.badge.safe     { background: var(--safe-lt);     color: var(--safe); }
+.badge.caution  { background: var(--warning-lt);  color: var(--warning); }
+.badge.unsafe   { background: var(--critical-lt); color: var(--critical); }
+
+/* ── Footer ── */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 0.75rem;
+  color: var(--text-lt);
+  font-family: var(--font-mono);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .grid-charts { grid-template-columns: 1fr 1fr; }
+  .col-wide    { grid-column: 1 / 3; }
+  .col-narrow  { grid-column: 1 / 3; grid-row: auto; flex-direction: row; }
+  .col-half    { grid-column: span 1; }
+}
+
+@media (max-width: 680px) {
+  .grid-charts { grid-template-columns: 1fr; }
+  .col-wide, .col-narrow, .col-half { grid-column: 1 / 2; }
+  .col-narrow { flex-direction: column; }
+  .site-footer { flex-direction: column; gap: 0.3rem; text-align: center; }
+}
